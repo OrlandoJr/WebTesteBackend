@@ -71,7 +71,7 @@ namespace Application.Services
             {
                 if (!ModelState.IsValid)
                 {
-                    return BadRequest(MessagesStatics.EntityNotValid);
+                    return NotFound(MessagesStatics.EntityNotValid);
                 }
 
                 await _serviceBase.UpdateAsync(_mapper.Map<ClientesModel>(obj));
